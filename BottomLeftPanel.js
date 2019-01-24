@@ -6,11 +6,11 @@ import {
     View,
 } from 'react-360';
 
-export default class Hello2 extends React.Component {
+export default class BottomLeftPanel extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            input1: 'ASDF'
+            input1: '!'
         };
 
         //this.tick = this.tick.bind(this);
@@ -23,7 +23,7 @@ export default class Hello2 extends React.Component {
             <View style={styles.panel}>
                 <View style={styles.greetingBox}>
                     <Text style={styles.greeting}>
-                        Welcome { displayString }
+                        BottomLeftPanel { displayString }
                     </Text>
                 </View>
             </View>
@@ -36,19 +36,20 @@ const styles = StyleSheet.create({
         // Fill the entire surface
         width: 500,
         height: 600,
-        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+        backgroundColor: 'rgba(255, 255, 255, 0.4)',
         justifyContent: 'center',
         alignItems: 'center',
         transform: [
             // { rotateX: 90 },
-            { translateX: 550 }
+            { translateX: 0 },
+            { translateY: -650 }
         ],
-        borderColor: 'blue',
+        borderColor: 'green',
         borderWidth: 2,
     },
     greetingBox: {
         padding: 20,
-        backgroundColor: 'red',
+        backgroundColor: 'darkblue',
         borderColor: '#639dda',
         borderWidth: 12,
     },
@@ -56,3 +57,5 @@ const styles = StyleSheet.create({
         fontSize: 30,
     },
 });
+
+

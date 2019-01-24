@@ -6,8 +6,15 @@ import {
     View,
 } from 'react-360';
 
-import Hello360 from './Hello360';
-import Hello2 from './Hello2';
+import TopLeftPanel from './TopLeftPanel';
+import TopCenterPanel from './TopCenterPanel';
+import TopRightPanel from './TopRightPanel';
+import BottomRightPanel from './BottomRightPanel';
+import BottomLeftPanel from './BottomLeftPanel';
 
-AppRegistry.registerComponent('Hello2', () => Hello2);
-AppRegistry.registerComponent('Hello360', () => Hello360);
+AppRegistry.registerComponent('TopLeftPanel', () => TopLeftPanel);
+AppRegistry.registerComponent('TopCenterPanel', () => TopCenterPanel);
+AppRegistry.registerComponent('TopRightPanel', () => TopRightPanel);
+AppRegistry.registerComponent('BottomRightPanel', () => BottomRightPanel);
+AppRegistry.registerComponent('BottomLeftPanel', () => BottomLeftPanel);
+

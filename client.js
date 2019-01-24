@@ -10,15 +10,36 @@ function init(bundle, parent, options = {}) {
     ...options,
   });
 
+  const myCylinderSurface = new Surface(
+    2000, /* width */
+    2000, /* height */
+    Surface.SurfaceShape.Cylinder /* shape */
+  );
+
   // Render your app content to the default cylinder surface
   r360.renderToSurface(
-    r360.createRoot('Hello2', { /* initial props */ }),
-    r360.getDefaultSurface()
+    r360.createRoot('TopLeftPanel', { /* initial props */ }),
+    myCylinderSurface
   );
 
   r360.renderToSurface(
-    r360.createRoot('Hello360', { /* initial props */ }),
-    r360.getDefaultSurface()
+    r360.createRoot('TopCenterPanel', { /* initial props */ }),
+    myCylinderSurface
+  );
+
+  r360.renderToSurface(
+    r360.createRoot('TopRightPanel', { /* initial props */ }),
+    myCylinderSurface
+  );
+
+  r360.renderToSurface(
+    r360.createRoot('BottomRightPanel', { /* initial props */ }),
+    myCylinderSurface
+  );
+
+  r360.renderToSurface(
+    r360.createRoot('BottomLeftPanel', { /* initial props */ }),
+    myCylinderSurface
   );
 
   // Load the initial environment
