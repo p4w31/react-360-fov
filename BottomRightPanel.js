@@ -54,6 +54,6 @@ const styles = StyleSheet.create({
         borderWidth: 12,
     },
     greeting: {
-        fontSize: 30,
+        fontSize: 30
     },
 });
