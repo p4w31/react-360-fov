@@ -4,33 +4,41 @@ import {
     StyleSheet,
     Text,
     View,
+    NativeModules
 } from 'react-360';
 
 export default class TopCenterPanel extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            input1: '!'
+            input1: '!',
+            controllers: null
         };
 
         //this.tick = this.tick.bind(this);
+        NativeModules.ControllerInfo.getControllers().then(controllers => {
+            console.log('ControllerInfo.getControllers');
+            console.log(controllers);
+            this.setState({controllers: controllers});
+        });
     }
 
     render() {
-        let displayString = this.state.input1;
+        //let displayControllers = this.state.controllers.length;
+        let displayControllers = this.state.controllers === null
+        ? <Text style={styles.greeting}>Waiting...</Text>
+        : <Text style={styles.greeting}>
+                Discovered controllers: { this.state.controllers.length }
+            </Text>;
 
         return (
             <View style={styles.panel}>
                 <View style={styles.greetingBox1}>
                     <Text style={styles.greeting}>
-                        TopCenterPanel 1
+                        { displayControllers }
                     </Text>
                 </View>
-                <View style={styles.greetingBox2}>
-                    <Text style={styles.greeting}>
-                        TopCenterPanel 2
-                    </Text>
-                </View>
+                
             </View>
         );
     }
