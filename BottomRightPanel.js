@@ -10,10 +10,9 @@ export default class BottomRightPanel extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            input1: '!'
+            input1: ''
         };
 
-        //this.tick = this.tick.bind(this);
         this.handleInput = this.handleInput.bind(this);
     }
 
@@ -21,23 +20,30 @@ export default class BottomRightPanel extends React.Component {
         const event = e.nativeEvent;
         const inputEvent = event.inputEvent;
 
-        // if(inputEvent.action == 'up') {
-        //     let letter = String.fromCharCode(inputEvent.button);
-        //     console.log(letter);
-        //     console.log('======');
-        //     this.setState({ input1: this.state.input1 + letter});
-        // }
-        this.setState({ input1: this.state.input1 + 'X'});
+        if(inputEvent.action == 'up') {
+            let letter = String.fromCharCode(inputEvent.button);
+            this.setState({ input1: this.state.input1 + letter});
+        }
+        //this.setState({ input1: this.state.input1 + 'X'});
     }
 
     render() {
-        let displayString = this.state.input1;
+        let displayString = this.state.input1 || 'no input';
 
         return (
             <View style={styles.panel} onInput={this.handleInput} >
                 <View style={styles.greetingBox}>
                     <Text style={styles.greeting}>
-                        BottomRightPanel
+                        [PC] Hover mouse and type
+                    </Text>
+                    
+                </View>
+                <View style={styles.greetingBox}>
+                    <Text style={styles.greeting}>
+                        Result:
+                    </Text>
+                    <Text style={styles.greeting}>
+                        { displayString }
                     </Text>
                 </View>
             </View>

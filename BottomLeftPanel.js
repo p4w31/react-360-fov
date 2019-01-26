@@ -10,20 +10,35 @@ export default class BottomLeftPanel extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            input1: '!'
+            input1: ''
         };
 
-        //this.tick = this.tick.bind(this);
+        this.handleInput = this.handleInput.bind(this);
+    }
+
+    handleInput(e) {
+        const event = e.nativeEvent;
+        const inputEvent = event.inputEvent;
+
+        this.setState({ input1: this.state.input1 + 'Tap '});
     }
 
     render() {
-        let displayString = this.state.input1;
+        let displayString = this.state.input1 || 'no input';
 
         return (
-            <View style={styles.panel}>
+            <View style={styles.panel} onInput={this.handleInput} >
                 <View style={styles.greetingBox}>
                     <Text style={styles.greeting}>
-                        BottomLeftPanel
+                        [Phone, PC] All events handling
+                    </Text>
+                </View>
+                <View style={styles.greetingBox}>
+                    <Text style={styles.greeting}>
+                        Result:
+                    </Text>
+                    <Text style={styles.greeting}>
+                        { displayString }
                     </Text>
                 </View>
             </View>
