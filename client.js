@@ -11,7 +11,7 @@ function init(bundle, parent, options = {}) {
   });
 
   const myCylinderSurface = new Surface(
-    2000, /* width */
+    1600, /* width */
     2000, /* height */
     Surface.SurfaceShape.Cylinder /* shape */
   );
@@ -38,7 +38,42 @@ function init(bundle, parent, options = {}) {
   );
 
   r360.renderToSurface(
+    r360.createRoot('BottomCenterPanel', { /* initial props */ }),
+    myCylinderSurface
+  );
+
+  r360.renderToSurface(
     r360.createRoot('BottomLeftPanel', { /* initial props */ }),
+    myCylinderSurface
+  );
+
+  r360.renderToSurface(
+    r360.createRoot('Footer1', { /* initial props */ }),
+    myCylinderSurface
+  );
+
+  r360.renderToSurface(
+    r360.createRoot('Footer2', { /* initial props */ }),
+    myCylinderSurface
+  );
+
+  r360.renderToSurface(
+    r360.createRoot('Footer3', { /* initial props */ }),
+    myCylinderSurface
+  );
+
+  r360.renderToSurface(
+    r360.createRoot('Footer4', { /* initial props */ }),
+    myCylinderSurface
+  );
+
+  r360.renderToSurface(
+    r360.createRoot('Footer5', { /* initial props */ }),
+    myCylinderSurface
+  );
+
+  r360.renderToSurface(
+    r360.createRoot('Footer6', { /* initial props */ }),
     myCylinderSurface
   );
 
