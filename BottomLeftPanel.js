@@ -23,7 +23,7 @@ export default class BottomLeftPanel extends React.Component {
             <View style={styles.panel}>
                 <View style={styles.greetingBox}>
                     <Text style={styles.greeting}>
-                        BottomLeftPanel { displayString }
+                        BottomLeftPanel
                     </Text>
                 </View>
             </View>
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
         // Fill the entire surface
         width: 500,
         height: 600,
-        backgroundColor: 'rgba(255, 255, 255, 0.4)',
+        backgroundColor: 'rgba(255, 255, 255, 0.5)',
         justifyContent: 'center',
         alignItems: 'center',
         transform: [
@@ -44,14 +44,14 @@ const styles = StyleSheet.create({
             { translateX: 0 },
             { translateY: -650 }
         ],
-        borderColor: 'green',
+        borderColor: 'black',
         borderWidth: 2,
     },
     greetingBox: {
         padding: 20,
         backgroundColor: 'darkblue',
-        borderColor: '#639dda',
-        borderWidth: 12,
+        borderColor: 'black',
+        borderWidth: 2,
     },
     greeting: {
         fontSize: 30,

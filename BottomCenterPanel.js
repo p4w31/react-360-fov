@@ -23,7 +23,15 @@ export default class BottomCenterPanel extends React.Component {
             <View style={styles.panel}>
                 <View style={styles.greetingBox1}>
                     <Text style={styles.greeting}>
-                        Best place for text here.
+                    Although our field of view is much larger (approximately 180º), 
+                    we need to be aware that only in a small portion of that field 
+                    can you perceive symbols (the center 60º) or read text (the center 10º). 
+                    If you do not have an eye tracking sensor we assume that 
+                    the center of the screen is where the user is focusing their eyes.
+                    </Text>
+                    
+                    <Text style={styles.greeting}>
+                    https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API/Concepts
                     </Text>
                 </View>
             </View>
@@ -36,7 +44,7 @@ const styles = StyleSheet.create({
         // Fill the entire surface
         width: 500,
         height: 600,
-        backgroundColor: 'rgba(255, 255, 255, 0.3)',
+        backgroundColor: 'rgba(255, 255, 255, 0.5)',
         justifyContent: 'center',
         alignItems: 'center',
         transform: [
@@ -44,24 +52,14 @@ const styles = StyleSheet.create({
             { translateX: 550 },
             { translateY: -650 }
         ],
-        borderColor: 'blue',
+        borderColor: 'black',
         borderWidth: 2,
     },
     greetingBox1: {
         padding: 20,
         backgroundColor: 'darkblue',
-        borderColor: '#639dda',
-        borderWidth: 12,
-    },
-    greetingBox2: {
-        padding: 20,
-        backgroundColor: 'darkblue',
-        borderColor: '#639dda',
-        borderWidth: 12,
-        transform: [
-            // { rotateX: 90 },
-            { translateX: 50 }
-        ],
+        borderColor: 'black',
+        borderWidth: 2,
     },
     greeting: {
         fontSize: 30,

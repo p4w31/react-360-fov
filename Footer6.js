@@ -44,14 +44,14 @@ const styles = StyleSheet.create({
             { translateX: 1350 },
             { translateY: -1300 }
         ],
-        borderColor: 'green',
+        borderColor: 'blue',
         borderWidth: 2,
     },
     greetingBox: {
         padding: 20,
         backgroundColor: 'darkblue',
-        borderColor: '#639dda',
-        borderWidth: 12,
+        borderColor: 'black',
+        borderWidth: 2,
     },
     greeting: {
         fontSize: 30,

@@ -37,7 +37,7 @@ export default class BottomRightPanel extends React.Component {
             <View style={styles.panel} onInput={this.handleInput} >
                 <View style={styles.greetingBox}>
                     <Text style={styles.greeting}>
-                        BottomRightPanel { displayString }
+                        BottomRightPanel
                     </Text>
                 </View>
             </View>
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
         // Fill the entire surface
         width: 500,
         height: 600,
-        backgroundColor: 'rgba(255, 255, 255, 0.3)',
+        backgroundColor: 'rgba(255, 255, 255, 0.5)',
         justifyContent: 'center',
         alignItems: 'center',
         transform: [
@@ -60,14 +60,14 @@ const styles = StyleSheet.create({
             // { translateX: 0 },
             // { translateY: 0 }
         ],
-        borderColor: 'blue',
+        borderColor: 'black',
         borderWidth: 2,
     },
     greetingBox: {
         padding: 20,
         backgroundColor: 'darkblue',
-        borderColor: '#639dda',
-        borderWidth: 12,
+        borderColor: 'black',
+        borderWidth: 2,
     },
     greeting: {
         fontSize: 30

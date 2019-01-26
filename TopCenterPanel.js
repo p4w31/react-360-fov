@@ -23,12 +23,12 @@ export default class TopCenterPanel extends React.Component {
             <View style={styles.panel}>
                 <View style={styles.greetingBox1}>
                     <Text style={styles.greeting}>
-                        TopCenterPanel111 { displayString }
+                        TopCenterPanel 1
                     </Text>
                 </View>
                 <View style={styles.greetingBox2}>
                     <Text style={styles.greeting}>
-                        TopCenterPanel222 { displayString }
+                        TopCenterPanel 2
                     </Text>
                 </View>
             </View>
@@ -48,20 +48,20 @@ const styles = StyleSheet.create({
             // { rotateX: 90 },
             { translateX: 550 }
         ],
-        borderColor: 'blue',
+        borderColor: 'black',
         borderWidth: 2,
     },
     greetingBox1: {
         padding: 20,
         backgroundColor: 'darkblue',
-        borderColor: '#639dda',
-        borderWidth: 12,
+        borderColor: 'black',
+        borderWidth: 2,
     },
     greetingBox2: {
         padding: 20,
         backgroundColor: 'darkblue',
-        borderColor: '#639dda',
-        borderWidth: 12,
+        borderColor: 'black',
+        borderWidth: 2,
         transform: [
             // { rotateX: 90 },
             { translateX: 50 }

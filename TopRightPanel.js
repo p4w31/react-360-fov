@@ -23,7 +23,7 @@ export default class TopRightPanel extends React.Component {
             <View style={styles.panel}>
                 <View style={styles.greetingBox}>
                     <Text style={styles.greeting}>
-                        TopRightPanel { displayString }
+                        TopRightPanel
                     </Text>
                 </View>
             </View>
@@ -43,14 +43,14 @@ const styles = StyleSheet.create({
             // { rotateX: 90 },
             { translateX: 1100 }
         ],
-        borderColor: 'blue',
+        borderColor: 'black',
         borderWidth: 2,
     },
     greetingBox: {
         padding: 20,
         backgroundColor: 'darkblue',
-        borderColor: '#639dda',
-        borderWidth: 12,
+        borderColor: 'black',
+        borderWidth: 2,
     },
     greeting: {
         fontSize: 30,
