@@ -1,8 +1,10 @@
 import React from 'react';
 import {
+    asset,
     AppRegistry,
     StyleSheet,
     Text,
+    Image,
     View,
 } from 'react-360';
 
@@ -21,11 +23,7 @@ export default class TopLeftPanel extends React.Component {
 
         return (
             <View style={styles.panel}>
-                <View style={styles.greetingBox}>
-                    <Text style={styles.greeting}>
-                        TopLeftPanel
-                    </Text>
-                </View>
+                <Image style={styles.image} source={asset('3.jpg')} />
             </View>
         );
     }
@@ -46,9 +44,15 @@ const styles = StyleSheet.create({
         borderColor: 'black',
         borderWidth: 2,
     },
+    image: {
+        width: 500,
+        height: 500
+    },
     greetingBox: {
+        // height: 256,
+        // width: 256,
         padding: 20,
-        backgroundColor: 'darkblue',
+        //backgroundColor: 'darkblue',
         borderColor: 'black',
         borderWidth: 2,
     },

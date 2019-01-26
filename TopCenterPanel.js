@@ -24,7 +24,6 @@ export default class TopCenterPanel extends React.Component {
     }
 
     render() {
-        //let displayControllers = this.state.controllers.length;
         let displayControllers = this.state.controllers === null
         ? <Text style={styles.greeting}>Waiting...</Text>
         : <Text style={styles.greeting}>
